@@ -50,11 +50,11 @@ defmodule Ld2e do
     def 入 名,实 do import DS
         入 @此, {名,实}
     end
-    def 生 文,核 do
-        其 = 拆 文, @令
+    def 生 句,核 do
+        其 = 拆 句, @令
         [名|实] = 其
         键 = 转 名
-        值 = 何.(实)
+        值 = 核.(实)
         入 键,值
     end
     def 生一 言 do import Lib
@@ -70,7 +70,7 @@ defmodule Ld2e do
         文 = 文移 言,1
         句二 = 拆 文,@言
         [言一,言二] = 句二
-
+        生 言一,&()
 
     end
 
