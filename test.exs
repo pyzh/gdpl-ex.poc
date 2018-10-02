@@ -1,5 +1,5 @@
 defmodule A do
-    #def run do:    x=1;    y=2;    x+y
+    @a 1 ;  @b 2
     def run do 1 end
 end
 
