@@ -13,7 +13,8 @@ defmodule Lib do
     def 文起 文,前 do String.starts_with? 文, 前 end
     def 文移 文,位 do String.slice 文, 位, String.length(文) end
     def 组去 组,位 do List.delete_at 组,位 end
-    def 组员 组,值,位\\0 do List.keymember 组, 值,位 end
+    def 组员 组,值,位\\0 do List.keymember? 组, 值,位 end
+    def 循选 组,函 do Enum.filter 组,函 end
     def 循映 组,函 do Enum.map 组,函 end
     def 转(名) when is_bitstring 名 do String.to_atom 名 end
 end
