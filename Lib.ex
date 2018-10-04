@@ -28,5 +28,5 @@ defmodule DS do # data store
     def 列 库,式 do :ets.match 库,式 end
     def 全 do @全 end  # todo： 用use macro来替代[函数/返回值
     def 全键 do @全键 end
-    def 取值 键,库 do [{^键,值}] = :ets.lookup 库,键; 值 end
+    def 取值 库,键 do [{^键,值}] = :ets.lookup 库,键; 值 end
 end
