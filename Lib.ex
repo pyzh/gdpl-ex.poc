@@ -21,7 +21,7 @@ end
 
 defmodule DS do # data store
     @全键 {:'$1',:_} ; @全 :'$1'
-    def 储 名 do :ets.new 名,[:set,:protected] end # 表
+    def 储 名 do :ets.new 名,[:set,:protected,:named_table] end # 表
     def 入 库,物 do :ets.insert(库,物) end # 物={名,实}
     def 列 库,式 do :ets.match 库,式 end
     def 全 do @全 end  # todo： 用use macro来替代[函数/返回值
