@@ -2,28 +2,26 @@ defmodule Ld2e do #原;为 '，' #原,为 '/'
     @句 "；" ; @言 "，" ; @令 "为" ; @记 "记" ; @求 "求"
     @确定 true ; @此 :Ld2e
     @指令1 "List1为'1234234'；记a为List1，b为2；求a中b的个数"
+    import Lib ; import DS
 
-    def 分 do import Lib
-        断句 = 拆 @指令1, @句; 特解 断句 end
+    def 分 do 拆( @指令1, @句) |> 特解 end
     
-    def 特解 句 do import DS
-        [一,二,三] = 句; 仓 = 储 @此
-        生一 一;生二 二;生三 三
-    end
+    def 特解 句 do  _仓= 储 @此; 句 |> 生一 |> 生二 |> 生三  end
+    
     def 通解 句 do end #略
 
-    def 入 名,实 do import DS; 入 @此, {名,实} end
+    def 仓入 名,实 do 入 @此, {名,实} end
 
     def 无 我 do 我 end
 
-    def 生 句, 核 \\ &无 do
-        其 = 拆 句, @令; [名|实] = 其
-        键 = 转 名; 值 = 核.(实); 入 键,值 end
+    def 生 句, 核\\&(&1) do
+        [名,实|_] = 拆 句, @令
+        键 = 转 名; 值 = 核.(实); 入 @此, {键,值} end
 
     def 生一 言 do import Lib; 生 言,&(文去 &1,"'") end
 
     def 生二 言 do import Lib
-        @确定 = 文前 言,@记; 文 = 文移 言,1
+        @确定 = 文起 言,@记; 文 = 文移 言,1
         句二 = 拆 文,@言; [言一,言二] = 句二
         生 言一,&转; 生 言二
     end
@@ -46,14 +44,7 @@ defmodule Ld2e do #原;为 '，' #原,为 '/'
         # 求[个数]
     end
 
-    def 开 do
-        #IO.puts @指令1
-        #库 = Lib
-        import Lib
-        
-        印 分
-        #印 "1"
-    end
+    def 开 do 分(); 印 "完" end
 end
 
 Ld2e.开

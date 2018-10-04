@@ -8,6 +8,7 @@
 defmodule Lib do
     # 文="字符串"
     def 印 文 do IO.puts 文 end
+    def 印原 体 do IO.inspect 体 end
     def 拆 文,间隔 do String.split 文, 间隔 end
     def 文去 文,式 do String.trim 文, 式 end
     def 文起 文,前 do String.starts_with? 文, 前 end
