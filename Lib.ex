@@ -17,6 +17,7 @@ defmodule Lib do
     def 组员 组,值,位\\0 do List.keymember? 组, 值,位 end
     def 循选 组,函 do Enum.filter 组,函 end
     def 循映 组,函 do Enum.map 组,函 end
+    def 循平 组,函\\(& &1) do Enum.flat_map 组,函 end
     def 转(名) when is_bitstring 名 do String.to_atom 名 end
 end
 
@@ -27,4 +28,5 @@ defmodule DS do # data store
     def 列 库,式 do :ets.match 库,式 end
     def 全 do @全 end  # todo： 用use macro来替代[函数/返回值
     def 全键 do @全键 end
+    def 取值 键,库 do [{^键,值}] = :ets.lookup 库,键; 值 end
 end

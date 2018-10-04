@@ -15,11 +15,11 @@ defmodule A do
         # vL = 数据列表
         组员 v, :a
         组员 v, :a, 1
-        循选 v,&()
+        #循选 v,&()
     end
     def t102测Lib下所有函数的case do 
         :其余略 end 
-    
+    def a do 1 end
 end
 
 IO.puts A.run
