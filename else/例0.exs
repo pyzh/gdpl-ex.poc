@@ -9,7 +9,7 @@ defmodule Ld2e do #原;为 '，' #原,为 '/'
     
     def 特解 句 do  _仓= 储 @此; 句 |> 生一 |> 生二 |> 生三  end
     
-    def 通解 句 do end #略
+    # def 通解 句 do end #略
 
     def 无 我 do 我 end
 
