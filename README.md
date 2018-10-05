@@ -9,7 +9,7 @@
 
 运行方法：
 
- - 命令行执行 `elixir 例2.ex`
+ - 命令行执行 `elixir 例2.exs`
  - 例1系列文件，需要先编译Lib.ex `elixirc Lib.ex` // 例2和ex开头的不需要
 
 问曰：windows 命令行乱码怎么搞？ 
