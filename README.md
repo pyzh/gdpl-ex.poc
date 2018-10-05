@@ -17,4 +17,4 @@
 
 联系：微信/qq=七三5151九65，邮件=absente#live.cn
 
-其他：略
+其他：https://zhuanlan.zhihu.com/p/46030123 《用elixir实现一个简单的中文语句解析
