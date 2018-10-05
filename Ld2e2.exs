@@ -1,7 +1,7 @@
 defmodule Ld2e do 
     @句 "；" ; @言 "，" ; @令 "为" ; @求 "求" ; @记 "记"
     @确定 true ; @此 :Ld2e ; import Lib ; import DS
-    @指令1 "List1为'1234234'；记a为List1，b为2；求a中b的个数"
+    @指令1 "List1为'12332234'；记a为List1，b为2；求a中b的个数"
     
     def 开 do 分(); 印 "完" end
 
