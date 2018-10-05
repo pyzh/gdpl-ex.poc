@@ -1,3 +1,4 @@
+#标准版
 defmodule Ld2e do 
     @句 "；" ; @言 "，" ; @令 "为" ; @求 "求" ; @记 "记"
     @确定 true ; @此 :Ld2e ; import Lib ; import DS
